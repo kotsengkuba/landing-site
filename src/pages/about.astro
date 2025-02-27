@@ -1,0 +1,71 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import Link from "@components/Link.astro";
+import { SITE, ABOUT, SOCIALS } from "@consts";
+---
+
+<PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
+    <Container>
+        <section>
+            <article>
+                <p class="animate">
+                    Hello! I'm Minnie 🖖🏾
+                </p>
+                <p class="animate">
+                    A designer, coder, maker of things.
+                    Exploring the intersections of design, play and technology. 
+                    Concerned about the climate, education, healthcare and accessibility.
+                    <p class="animate">
+                        I go by kotsengkuba in other spaces of the interwebz.
+                    </p>
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <p class="animate">
+                Socials
+                </p>
+                <p class="animate">
+                    {SOCIALS.map(SOCIAL => (
+                        <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
+                        {SOCIAL.NAME}
+                        <span>
+                            {`/`}
+                        </span>
+                        </Link>
+                    ))}
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <p class="animate">
+                    Shoot an
+                    <Link href="mailto:minnie.pangilinan@gmail.com" aria-label="Email" external>
+                        email
+                    </Link>
+                </p>
+            </article>
+        </section>
+    </Container>
+    <Container>
+        <section class="hidden">
+            <article class="animate">
+                <h6>A fuller bio for the serious ones:</h6>
+                <p>
+                    Minnie Pangilinan is a multidisciplinary designer, programmer, and maker with a strong foundation in both Product Design and Computer Science. She holds a Master in Design for Emergent Futures from the Institute of Advanced Architecture of Catalonia, ELISAVA, and Fab Lab Barcelona, and earned dual degrees in Computer Science and Industrial Design from the University of the Philippines - Diliman, graduating Magna Cum Laude in the latter.
+                </p>
+                <p>
+                    With an impressive background spanning software development, design, and education, Minnie has worked at UnionBank of the Philippines, University of the Philippines - Manila Surgical Innovation and Biotechnology Laboratory , and at Nokia - Manila Technology Center. She was also the co-founder of AA3 Design Studio, where she collaborates on creative design and product development projects.
+                </p>
+                <p>
+                    Recognized as a **2023 Tatler Asia Gen. T List Awardee** and a **James Dyson Award Winner**, Minnie's work explores the intersection of technology, sustainability, and accessibility. She is proficient in multiple programming languages, including Python, Java, and JavaScript, and has extensive experience in design thinking, prototyping, and AI tools.
+                </p>
+            </article>
+        </section>
+       
+            
+    </Container>
+</PageLayout>
