@@ -1,6 +1,11 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import { ATBP } from "@consts";
+import WideContainer from "@components/WideContainer.astro";
 ---
 
-<PageLayout title={ATBP.TITLE} description={ATBP.DESCRIPTION}></PageLayout>
+<PageLayout title={ATBP.TITLE} description={ATBP.DESCRIPTION}>
+    <WideContainer>
+        Dumping everything else here.
+    </WideContainer>
+</PageLayout>

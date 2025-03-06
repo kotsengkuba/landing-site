@@ -23,8 +23,8 @@ export const BLOG: Metadata = {
   DESCRIPTION: "little notes",
 };
 
-export const WORK: Metadata = {
-  TITLE: "Work",
+export const WORKS: Metadata = {
+  TITLE: "Works",
   DESCRIPTION: "a showcase of my projects",
 };
 

@@ -5,22 +5,27 @@ import { SITE } from "@consts";
 ---
 
 <header>
-  <WideContainer>
-    <div class="flex flex-wrap gap-y-2 justify-between">
+    <div class="fixed z-100 top-0 left-0 w-screen">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
-          {SITE.NAME}
+        <div class="flex items-center justify-between my-auto px-32 py-10">
+            
+              <div class="font-semibold">
+                {SITE.NAME}
+              </div>
+            
         </div>
       </Link>
-      <nav class="flex gap-1">
+      
+    </div>
+      <nav class="z-10 justify-center flex flex-wrap gap-y-2 gap-x-5 items-center absolute w-screen">
         <Link href="/about">
           about
         </Link>
         <span>
           {`/`}
         </span>
-        <Link href="/work">
-          work
+        <Link href="/works">
+          works
         </Link>
         <span>
           {`/`}
@@ -30,5 +35,4 @@ import { SITE } from "@consts";
         </Link>
       </nav>
     </div>
-  </WideContainer>
 </header>
