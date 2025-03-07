@@ -8,33 +8,8 @@ import { SITE, HOME, SOCIALS } from "@consts";
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
-      Welcome
-    </h4>
-    <div class="space-y-16">
-      <section>
-        <article class="space-y-4">
-          <p class="animate">
-            Sorry, the site is currently under development.
-            Catch me in other places on the web in the meanwhile:
-          </p>
-          {SOCIALS.map(SOCIAL => (
-            <p class="animate">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
-              </Link>
-              {"/"}
-            </p>
-          ))}
-          <br>
-          <p class="animate">
-            For immediate inquiries, shoot me an 
-            <Link href="mailto:minnie.pangilinan@gmail.com" aria-label="Email" external>
-              email
-            </Link>.
-          </p>
-        </article>
-      </section>
+    <div class="text-center">
+      This page is intentionally left blank.
     </div>
   </Container>
 </PageLayout>
