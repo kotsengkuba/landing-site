@@ -1,34 +1,40 @@
 ---
-import WideContainer from "@components/WideContainer.astro";
 import Link from "@components/Link.astro";
-import { SITE } from "@consts";
+import { Image } from 'astro:assets';
+import dark_logo from "../assets/logo_minnie_small_white.png";
+import light_logo from "../assets/logo_minnie_small_black.png";
 ---
 
 <header>
     <div class="fixed z-100 top-0 left-0 w-screen">
+      
       <Link href="/" underline={false}>
         <div class="flex items-center justify-between my-auto px-32 py-10">
-            
-              <div class="font-semibold">
-                {SITE.NAME}
-              </div>
-            
-        </div>
+          <Image src={dark_logo} width="50" alt="Minnie's logo" class="hidden dark:block"/>  
+          <Image src={light_logo} width="50" alt="Minnie's logo" class="block dark:hidden"/>  
+        </div> 
+        
       </Link>
       
     </div>
-      <nav class="z-10 justify-center flex flex-wrap gap-y-2 gap-x-5 items-center absolute w-screen">
+      <nav class="z-100 justify-center flex flex-wrap gap-y-2 gap-x-5 items-center absolute w-screen">
         <Link href="/about">
           about
         </Link>
         <span>
-          {`/`}
+          {`.`}
         </span>
         <Link href="/works">
           works
         </Link>
         <span>
-          {`/`}
+          {`.`}
+        </span>
+        <Link href="/">
+          now
+        </Link>
+        <span>
+          {`.`}
         </span>
         <Link href="/atbp">
           atbp
