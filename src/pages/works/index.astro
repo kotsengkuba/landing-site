@@ -4,7 +4,6 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import { WORKS } from "@consts";
-import WideContainer from "@components/WideContainer.astro";
 
 const data = (await getCollection("works"))
   .filter(post => !post.data.draft)
@@ -19,12 +18,9 @@ const work = await Promise.all(
 ---
 
 <PageLayout title={WORKS.TITLE} description={WORKS.DESCRIPTION}>
-  <div class="grid grid-cols-4 gap-4">
-    <WideContainer class="col-span-1">
+  <div class="justify-center items-center">
+    <Container class="max-w-1">
       <div class="space-y-10">
-        <div class="animate font-semibold text-black dark:text-white">
-          Work
-        </div>
         <ul class="flex flex-col space-y-4">
           { 
             work.map(entry => (
@@ -35,11 +31,6 @@ const work = await Promise.all(
           }
         </ul>
       </div>
-    </WideContainer>
-    <WideContainer>
-      <div class="space-y-10">
-        Hello there
-      </div>
-    </WideContainer>
+    </Container>
   </div>
 </PageLayout>

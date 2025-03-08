@@ -1,12 +1,10 @@
 ---
 title: "Box Office"
-description: "Work from home workstation"
+blurb: "Work from home workstation"
 date: "Mar 18 2024"
 draft: true
-
-demoURL: "https://astro-sphere-demo.vercel.app"
 thumbnail: ""
-tags: ["mdef"]
+tags: ["home/furniture"]
 ---
 
 ![Jaleo](/astro-sphere.jpg)

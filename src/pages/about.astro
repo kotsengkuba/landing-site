@@ -1,13 +1,14 @@
 ---
 import Container from "@components/Container.astro";
+import WideContainer from "@components/WideContainer.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import Link from "@components/Link.astro";
 import { SITE, ABOUT, SOCIALS } from "@consts";
 ---
 
 <PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
-    <Container>
-        <section>
+    <WideContainer>
+        <div class="grid grid-cols-3 gap-4">
             <article>
                 <p class="animate">
                     Hello! I'm Minnie 🖖🏾
@@ -21,25 +22,26 @@ import { SITE, ABOUT, SOCIALS } from "@consts";
                     </p>
                 </p>
             </article>
-        </section>
-        <section>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
             <article>
-                <p class="animate">
+                <h4 class="animate">
                 Socials
-                </p>
+                </h4>
                 <p class="animate">
                     {SOCIALS.map(SOCIAL => (
                         <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
                         {SOCIAL.NAME}
-                        <span>
-                            {`/`}
-                        </span>
+                        
                         </Link>
+                        <span>
+                            {`.`}
+                        </span>
                     ))}
                 </p>
             </article>
-        </section>
-        <section>
+        </div>
+        <div class="grid grid-cols-3 gap-4"> 
             <article>
                 <p class="animate">
                     Shoot an
@@ -48,24 +50,43 @@ import { SITE, ABOUT, SOCIALS } from "@consts";
                     </Link>
                 </p>
             </article>
-        </section>
-    </Container>
-    <Container>
-        <section class="hidden">
-            <article class="animate">
-                <h6>A fuller bio for the serious ones:</h6>
-                <p>
-                    Minnie Pangilinan is a multidisciplinary designer, programmer, and maker with a strong foundation in both Product Design and Computer Science. She holds a Master in Design for Emergent Futures from the Institute of Advanced Architecture of Catalonia, ELISAVA, and Fab Lab Barcelona, and earned dual degrees in Computer Science and Industrial Design from the University of the Philippines - Diliman, graduating Magna Cum Laude in the latter.
-                </p>
-                <p>
-                    With an impressive background spanning software development, design, and education, Minnie has worked at UnionBank of the Philippines, University of the Philippines - Manila Surgical Innovation and Biotechnology Laboratory , and at Nokia - Manila Technology Center. She was also the co-founder of AA3 Design Studio, where she collaborates on creative design and product development projects.
-                </p>
-                <p>
-                    Recognized as a **2023 Tatler Asia Gen. T List Awardee** and a **James Dyson Award Winner**, Minnie's work explores the intersection of technology, sustainability, and accessibility. She is proficient in multiple programming languages, including Python, Java, and JavaScript, and has extensive experience in design thinking, prototyping, and AI tools.
-                </p>
-            </article>
-        </section>
-       
-            
-    </Container>
+        </div>
+    </WideContainer>
+    <hr>
+    <WideContainer>
+        <div class="grid grid-cols-3 gap-8">
+            <section>
+                <article class="animate">
+                    <h3>A fuller bio for the serious ones:</h3>
+                    <p>
+                        Minnie Pangilinan is a multidisciplinary designer, programmer, and maker with a strong foundation in both Product Design and Computer Science. She holds a Master in Design for Emergent Futures from the Institute of Advanced Architecture of Catalonia, ELISAVA, and Fab Lab Barcelona, and earned dual degrees in Computer Science and Industrial Design from the University of the Philippines - Diliman, graduating Magna Cum Laude in the latter.
+                    </p>
+                    <p>
+                        With an impressive background spanning software development, design, and education, Minnie has worked at UnionBank of the Philippines, University of the Philippines - Manila Surgical Innovation and Biotechnology Laboratory , and at Nokia - Manila Technology Center. She was also the co-founder of AA3 Design Studio, where she collaborates on creative design and product development projects.
+                    </p>
+                    <p>
+                        Recognized as a **2023 Tatler Asia Gen. T List Awardee** and a **James Dyson Award Winner**, Minnie's work explores the intersection of technology, sustainability, and accessibility. She is proficient in multiple programming languages, including Python, Java, and JavaScript, and has extensive experience in design thinking, prototyping, and AI tools.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <article class="animate">
+                    <h3>I studied</h3>
+                    <ul>
+                        <li>Master of Design for Emergent Futures</li>
+                        <li>BFA Industrial Design</li>
+                        <li>BS Computer Science</li>
+                    </ul>
+                </article>
+                <article class="animate">
+                    <h3>I have worked with</h3>
+                    University of the Philippines College of Fine Arts FabLab, UnionBank of the Philippines, University of the Philippines Surgical Innovations and Biotechnology Laboratory, ATA Martial Arts Studio, The Mind Museum, Alcazaren Bros. Animation (Kwanimation Studios)
+                </article>
+            </section>
+            <section>
+                
+                
+            </section>
+        </div>
+    </WideContainer>
 </PageLayout>

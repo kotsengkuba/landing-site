@@ -1,10 +1,9 @@
 ---
 title: "Brakong"
-description: "(brakong description)"
+blurb: "(brakong description)"
 date: "Mar 18 2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
 thumbnail: ""
-tags: ["mdef"]
+tags: ["sustainability", "healthcare"]
 team: ["Jason Pechardo"]
 ---
 

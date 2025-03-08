@@ -1,10 +1,9 @@
 ---
 title: "Filipuzzles"
-description: "(filipuzzles description)"
+blurb: "(filipuzzles description)"
 date: "Mar 18 2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
 thumbnail: ""
-tags: ["mdef"]
+tags: ["play"]
 ---
 
 ![Jaleo](/astro-sphere.jpg)

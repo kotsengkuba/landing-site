@@ -11,5 +11,18 @@ import { SITE, HOME, SOCIALS } from "@consts";
     <div class="text-center">
       This page is intentionally left blank.
     </div>
+    <div class="text-center">
+      <p>
+        While I'm working on this site, you can check out my other things on the web:
+      </p>
+      <p class="animate">
+        {SOCIALS.map(SOCIAL => (
+            <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
+            {SOCIAL.NAME}
+            </Link>
+            <br>
+        ))}
+    </p>
+    </div>
   </Container>
 </PageLayout>

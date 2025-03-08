@@ -1,12 +1,10 @@
 ---
-title: "Bird of Prey Balancing Toy"
-description: "For the Klingon fans"
+title: "Klingon Balancing Toy"
+blurb: "For the ST fans"
 date: "Mar 18 2024"
 draft: true
-
-demoURL: "https://astro-sphere-demo.vercel.app"
 thumbnail: ""
-tags: ["mdef"]
+tags: ["play"]
 ---
 
 ![Jaleo](/astro-sphere.jpg)

@@ -1,10 +1,9 @@
 ---
 title: "Taekwondo Mural"
-description: "(mural description)"
+blurb: "(mural description)"
 date: "Mar 18 2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
 thumbnail: ""
-tags: ["mdef"]
+tags: ["visuals"]
 ---
 
 ![Jaleo](/astro-sphere.jpg)

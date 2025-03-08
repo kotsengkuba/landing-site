@@ -1,10 +1,9 @@
 ---
 title: "Pixel Play"
-description: "Sound and nature"
+blurb: "Sound and nature"
 date: "Mar 18 2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
 thumbnail: ""
-tags: ["mdef"]
+tags: ["mdef", "visuals", "play"]
 ---
 
 ![Jaleo](/astro-sphere.jpg)
