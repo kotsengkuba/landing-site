@@ -29,6 +29,11 @@ export const WORKS: Metadata = {
   DESCRIPTION: "a showcase of my projects",
 };
 
+export const NOW: Metadata = {
+  TITLE: "Now",
+  DESCRIPTION: "updates",
+};
+
 export const ATBP: Metadata = {
   TITLE: "At Iba Pa",
   DESCRIPTION: "other things in life",

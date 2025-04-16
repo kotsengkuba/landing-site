@@ -1,0 +1,32 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import { NOW } from "@consts";
+import Container from "@components/Container.astro";
+
+const nowContent = `
+Welcome to my Now page! Here's a snapshot of what I'm currently up to:
+
+- **Learning**: How to use Astro, vibe coding (haha) and learning/relearning Design Research.
+- **Working**: On this website (it's getting there!).
+- **Reading**: Random design articles.
+- **Listening**: 🐦🐦🐦
+- **Playing**: Balatro on the Nintendo Switch.
+
+This page is inspired by https://nownownow.com
+`;
+---
+
+<PageLayout title={NOW.TITLE} description={NOW.DESCRIPTION}>
+    <Container class="max-w-1 gap-4">
+        <section class="now-page">
+            <h1>What I'm Doing Now</h1>
+            <p>{nowContent}</p>
+        </section>
+    </Container>
+</PageLayout>
+<style>
+    p {
+        white-space: pre-wrap;
+    }
+    
+</style>
