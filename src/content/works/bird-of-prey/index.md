@@ -1,9 +1,9 @@
 ---
 title: "Klingon Balancing Toy"
-blurb: "For the ST fans"
+blurb: "A flat-pack toy for the Star Trek fans"
 date: "Mar 18 2024"
 draft: true
-thumbnail: ""
+thumbnail: "src/assets/logo_minnie_small_black.png"
 tags: ["play"]
 ---
 

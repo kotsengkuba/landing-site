@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
+import ImageTile from "@components/ImageTile.astro";
 import { WORKS } from "@consts";
 
 const data = (await getCollection("works"))
@@ -19,18 +20,16 @@ const work = await Promise.all(
 
 <PageLayout title={WORKS.TITLE} description={WORKS.DESCRIPTION}>
   <div class="justify-center items-center">
-    <Container class="max-w-1">
-      <div class="space-y-10">
-        <ul class="flex flex-col space-y-4">
+    <Container class="max-w-1 gap-4">
+        <ul class="flex flex-wrap">
           { 
             work.map(entry => (
               <li class="animate">
-                  <ArrowCard entry={entry}/>
+                  <ImageTile entry={entry}/>
               </li>
             ))
           }
         </ul>
-      </div>
     </Container>
   </div>
 </PageLayout>
