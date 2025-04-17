@@ -27,7 +27,7 @@ const { entry } = Astro.props;
 
     .image-tile:hover img {
         transform: scale(1.2);
-        filter: opacity(0.5);
+        filter: brightness(0.25);
         background: rgb(37, 37, 40);
     }
 
@@ -41,12 +41,12 @@ const { entry } = Astro.props;
         padding: 10px;
         opacity: 0;
         transition: opacity 0.3s ease;
-        border-radius: 4px;
     }
 
     .image-tile:hover .title {
         opacity: 1;
     }
+
 </style>
 
 <a href={`/${entry.collection}/${entry.slug}`}>
