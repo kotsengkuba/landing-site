@@ -1,33 +1,27 @@
 ---
 import Container from "@components/Container.astro";
-import WideContainer from "@components/WideContainer.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import Link from "@components/Link.astro";
-import { SITE, ABOUT, SOCIALS } from "@consts";
+import { SITE, ABOUT, SOCIALS, EDUC, EXHIBITS } from "@consts";
 ---
 
 <PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
-    <WideContainer>
-        <div class="grid grid-cols-3 gap-4">
+    <Container>
+        <div class="grid grid-cols-1 h-full">
             <article>
                 <p class="animate">
                     Hello! I'm Minnie 🖖🏾
                 </p>
                 <p class="animate">
-                    A designer, coder, maker of things.
-                    Exploring the intersections of design, play and technology. 
+                    Filipino designer, coder, maker of things.<br>
+                    Exploring the intersections of design, play and technology. <br>
                     Concerned about the climate, education, healthcare and accessibility.
                     <p class="animate">
-                        I go by kotsengkuba in other spaces of the interwebz.
+                        I go by <i>kotsengkuba</i> in other spaces of the interwebz.
                     </p>
                 </p>
             </article>
-        </div>
-        <div class="grid grid-cols-3 gap-4">
             <article>
-                <h4 class="animate">
-                Socials
-                </h4>
                 <p class="animate">
                     {SOCIALS.map(SOCIAL => (
                         <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
@@ -40,53 +34,61 @@ import { SITE, ABOUT, SOCIALS } from "@consts";
                     ))}
                 </p>
             </article>
-        </div>
-        <div class="grid grid-cols-3 gap-4"> 
             <article>
                 <p class="animate">
-                    Shoot an
+                    🚀 Shoot an
                     <Link href="mailto:minnie.pangilinan@gmail.com" aria-label="Email" external>
                         email
                     </Link>
                 </p>
             </article>
         </div>
-    </WideContainer>
-    <hr>
-    <WideContainer>
-        <div class="grid grid-cols-3 gap-8">
+        <div class="">
             <section>
                 <article class="animate">
-                    <h3>A fuller bio for the serious ones:</h3>
-                    <p>
-                        Minnie Pangilinan is a multidisciplinary designer, programmer, and maker with a strong foundation in both Product Design and Computer Science. She holds a Master in Design for Emergent Futures from the Institute of Advanced Architecture of Catalonia, ELISAVA, and Fab Lab Barcelona, and earned dual degrees in Computer Science and Industrial Design from the University of the Philippines - Diliman, graduating Magna Cum Laude in the latter.
-                    </p>
-                    <p>
-                        With an impressive background spanning software development, design, and education, Minnie has worked at UnionBank of the Philippines, University of the Philippines - Manila Surgical Innovation and Biotechnology Laboratory , and at Nokia - Manila Technology Center. She was also the co-founder of AA3 Design Studio, where she collaborates on creative design and product development projects.
-                    </p>
-                    <p>
-                        Recognized as a **2023 Tatler Asia Gen. T List Awardee** and a **James Dyson Award Winner**, Minnie's work explores the intersection of technology, sustainability, and accessibility. She is proficient in multiple programming languages, including Python, Java, and JavaScript, and has extensive experience in design thinking, prototyping, and AI tools.
-                    </p>
-                </article>
-            </section>
-            <section>
-                <article class="animate">
-                    <h3>I studied</h3>
-                    <ul>
-                        <li>Master of Design for Emergent Futures</li>
-                        <li>BFA Industrial Design</li>
-                        <li>BS Computer Science</li>
-                    </ul>
+                    <h3>Education</h3>
+                    <div class="align-middle">
+                        {EDUC.map(edu => (
+                            <div class="">
+                                {edu.HREF != undefined? 
+                                    <Link   href={edu.HREF} external aria-label={`${SITE.NAME} on ${edu.TITLE}`}>
+                                        {edu.TITLE}
+                                    </Link> :
+                                    <span class="font-semibold">{edu.TITLE}</span>
+                                }
+                                <span class="text-gray-500 dark:text-gray-400"> | {edu.DATE}</span>
+                                <div class="text-gray-500 dark:text-gray-400">{edu.DESCRIPTION}</div>
+                            </div>
+                        ))}
+                    </div>
                 </article>
                 <article class="animate">
-                    <h3>I have worked with</h3>
-                    University of the Philippines College of Fine Arts FabLab, UnionBank of the Philippines, University of the Philippines Surgical Innovations and Biotechnology Laboratory, ATA Martial Arts Studio, The Mind Museum, Alcazaren Bros. Animation (Kwanimation Studios)
+                    <h3>Past Collaborators and Clients</h3>
+                    University of the Philippines College of Fine Arts FabLab, 
+                    UnionBank of the Philippines, 
+                    University of the Philippines Surgical Innovations and Biotechnology Laboratory (SIBOL),
+                    ATA Martial Arts Studio,
+                    CLOOP,
+                    Alcazaren Bros. Animation (Kwanimation Studios)
+                </article>
+                <article class="animate">
+                    <h3>Exhibitions and Recognitions</h3>
+                    <div class="">
+                        {EXHIBITS.map(exhibit => (
+                            <div class="animate">
+                                {exhibit.HREF != undefined? 
+                                    <Link   href={exhibit.HREF} external aria-label={`${SITE.NAME} on ${exhibit.TITLE}`}>
+                                        {exhibit.TITLE}
+                                    </Link> :
+                                    <span class="font-semibold">{exhibit.TITLE}</span>
+                                }
+                                <span class="text-gray-500 dark:text-gray-400"> | {exhibit.DATE}</span>
+                                <div class="text-gray-400 dark:text-gray-700">{exhibit.DESCRIPTION}</div>
+                            </div>
+                        ))}
+                    </div>    
                 </article>
             </section>
-            <section>
-                
-                
-            </section>
-        </div>
-    </WideContainer>
+        </div>  
+    </Container>
 </PageLayout>

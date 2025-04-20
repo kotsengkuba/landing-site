@@ -1,7 +1,10 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
-import { NOW } from "@consts";
 import Container from "@components/Container.astro";
+import { NOW } from "@consts";
+
+// Import statement
+import {Content} from "@components/now.md";
 
 const nowContent = `
 Welcome to my Now page! Here's a snapshot of what I'm currently up to:
@@ -18,11 +21,9 @@ This page is inspired by https://nownownow.com
 
 <PageLayout title={NOW.TITLE} description={NOW.DESCRIPTION}>
     <Container class="max-w-1 gap-4">
-        <section class="now-page">
-            <h1>What I'm Doing Now</h1>
-            <p>{nowContent}</p>
-        </section>
+        <Content />
     </Container>
+    
 </PageLayout>
 <style>
     p {

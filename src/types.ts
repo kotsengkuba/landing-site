@@ -16,3 +16,10 @@ export type Socials = {
   NAME: string;
   HREF: string;
 }[];
+
+export type DateItemList = {
+  TITLE: string;
+  DESCRIPTION?: string;
+  HREF?: string;
+  DATE: string;
+}[]
