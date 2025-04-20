@@ -2,7 +2,7 @@
 title: "Filipuzzles"
 blurb: "Flat-pack tarsiers and tamaraws"
 date: "Mar 18 2024"
-thumbnail: "src/assets/works/FILIPUZZLES_thumbnail.png"
+thumbnail: "/assets/works/FILIPUZZLES_thumbnail.png"
 tags: ["play"]
 ---
 

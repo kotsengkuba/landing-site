@@ -3,7 +3,7 @@ title: "Klingon Balancing Toy"
 blurb: "A flat-pack toy for the Star Trek fans"
 date: "Mar 18 2024"
 draft: false
-thumbnail: "src/assets/works/BOP_thumbnail.png"
+thumbnail: "/assets/works/BOP_thumbnail.png"
 tags: ["play"]
 ---
 

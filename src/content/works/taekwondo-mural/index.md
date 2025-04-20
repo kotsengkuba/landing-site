@@ -2,7 +2,7 @@
 title: "Taekwondo Mural"
 blurb: "(mural description)"
 date: "Mar 18 2024"
-thumbnail: "src/assets/works/TKD_thumbnail.jpg"
+thumbnail: "/assets/works/TKD_thumbnail.jpg"
 tags: ["visuals"]
 ---
 

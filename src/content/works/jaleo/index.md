@@ -2,7 +2,7 @@
 title: "Jaleo"
 blurb: "Circuit Bending and Sound Exploration"
 date: "Mar 18 2024"
-thumbnail: "src/assets/works/JALEO_thumbnail.gif"
+thumbnail: "/assets/works/JALEO_thumbnail.gif"
 tags: ["mdef", "play"]
 ---
 
