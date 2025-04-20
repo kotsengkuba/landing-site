@@ -63,7 +63,7 @@ export const EDUC: DateItemList = [
     TITLE: "Master in Design for Emergent Futures",
     DESCRIPTION: "Institute for Advanced Architecture of Catalonia, FABLAB Barcelona, ELISAVA School of Design and Engineering",
     DATE: "2024",
-    HREF: "https://mdef.fablabbcn.org/"
+    HREF: "https://minnie-at-iaac.github.io/"
   },
   {
     TITLE: "BFA Industrial Design",

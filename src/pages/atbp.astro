@@ -1,13 +1,28 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+
 import { ATBP } from "@consts";
-import WideContainer from "@components/WideContainer.astro";
 ---
 
 <PageLayout title={ATBP.TITLE} description={ATBP.DESCRIPTION}>
-    <WideContainer>
-        <div class="text-center">
-            Dumping everything else here
+    <Container>
+        <div class="animate text-center text-xl">
+            at iba pa
         </div>
-    </WideContainer>
+        <div class="animate text-center text-xl">
+            ᜀᜆ᜔ ᜁᜊ ᜉ
+        </div>
+        <div class="animate text-center italic pb-12">
+            means "and others" in Tagalog
+        </div>
+
+        <div class="animate">
+            <div class="font-bold space-x-5">Para Llevar: Takeaways from 13 months in Barcelona</div>
+            <p class="text-sm/7">As I was leaving Barcelona, a friend suggested to write about my experience especially about 
+                all the difficult systems that I found myself in. So here's an online and interactive zine I made about it and more!
+                Read it at <a href="https://zines.minniemakes.co" class="text-green-600" >zines.minniemakes.co</a> </p>
+        </div>
+
+    </Container>
 </PageLayout>
