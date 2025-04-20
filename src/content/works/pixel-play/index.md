@@ -17,3 +17,5 @@ Coming from the Philippines, during her residency, Minnie saw snow for the first
 
 Caption by [La Grande Maison Rouge](https://www.instagram.com/grandemaisonrouge/)
 
+Read more about it [on my MDEF website](https://minnie-at-iaac.github.io/#/term2/08-Research-Trip/Playing-with-Pixels)
+
