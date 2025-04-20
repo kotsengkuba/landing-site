@@ -6,18 +6,16 @@ import light_logo from "../assets/logo_minnie_small_black.png";
 ---
 
 <header>
-    <div class="fixed z-100 top-0 left-0 w-screen">
-      
-      <Link href="/" underline={false}>
-        <div class="flex items-center justify-between my-auto px-32 py-10">
+  <div class="fixed w-full z-20 top-5 start-0">
+    <nav class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <Link href="/" underline={false} >
+        <div class="flex items-center space-x-3 rtl:space-x-reverse">
           <Image src={dark_logo} width="50" alt="Minnie's logo" class="hidden dark:block"/>  
           <Image src={light_logo} width="50" alt="Minnie's logo" class="block dark:hidden"/>  
         </div> 
         
       </Link>
-      
-    </div>
-      <nav class="z-100 justify-center flex flex-wrap gap-y-2 gap-x-5 items-center absolute w-screen">
+      <div class="items-center justify-between md:flex md:w-auto md:order-1 gap-x-2">
         <Link href="/about">
           about
         </Link>
@@ -39,6 +37,7 @@ import light_logo from "../assets/logo_minnie_small_black.png";
         <Link href="/atbp">
           atbp
         </Link>
-      </nav>
-    </div>
+      </div>
+    </nav>
+  </div>
 </header>
