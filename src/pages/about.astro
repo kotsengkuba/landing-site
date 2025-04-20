@@ -3,6 +3,9 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import Link from "@components/Link.astro";
 import { SITE, ABOUT, SOCIALS, EDUC, EXHIBITS } from "@consts";
+import Image from "astro/components/Image.astro";
+
+import avatar from "../assets/ABOUT_glitch_me.gif"
 ---
 
 <PageLayout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
@@ -10,18 +13,26 @@ import { SITE, ABOUT, SOCIALS, EDUC, EXHIBITS } from "@consts";
         <div class="grid grid-cols-1 h-full">
             <article>
                 <p class="animate">
-                    Hello! I'm Minnie 🖖🏾
+                    Hello there! I'm Minnie 🖖🏾
                 </p>
                 <p class="animate">
-                    Filipino designer, coder, maker of things.<br>
+                    Filipino designer, coder, maker, tinkerer of things.<br>
                     Exploring the intersections of design, play and technology. <br>
                     Concerned about the climate, education, healthcare and accessibility.
-                    <p class="animate">
-                        I go by <i>kotsengkuba</i> in other spaces of the interwebz.
-                    </p>
+                    
                 </p>
             </article>
+            <Image
+                src={avatar}
+                alt="Minnie Pangilinan"
+                class="animate rounded w-full h-full object-cover object-center"
+                width={500}
+                height={500}
+                />
             <article>
+                <p class="animate">
+                    I go by <i>kotsengkuba</i> in other spaces of the interwebz.
+                </p>
                 <p class="animate">
                     {SOCIALS.map(SOCIAL => (
                         <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
