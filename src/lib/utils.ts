@@ -1,6 +1,5 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { execSync } from "child_process";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -38,12 +37,4 @@ export function dateRange(startDate: Date, endDate?: Date | string): string {
   }
 
   return `${startMonth}${startYear} - ${endMonth}${endYear}`;
-}
-
-export function remarkModifiedTime() {
-  return function (tree, file) {
-    const filepath = file.history[0];
-    const result = execSync(`git log -1 --pretty="format:%cI" "${filepath}"`);
-    file.data.astro.frontmatter.lastModified = result.toString();
-  };
 }
